@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SistemaVentas.DAL.Repositorios.Contrato;
 using SistemaVentas.DAL.Repositorios;
+using SistemaVentas.Utility;
 
 namespace SistemaVentas.IOC
 {
@@ -23,6 +24,7 @@ namespace SistemaVentas.IOC
 
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IVentaRepository, VentasRepository>();
+            services.AddAutoMapper(typeof(AutoMapperProfile));
         }
     }
 }
