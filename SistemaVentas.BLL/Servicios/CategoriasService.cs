@@ -28,7 +28,6 @@ namespace SistemaVentas.BLL.Servicios
             {
                 var listaCategorias = await _categoriasRepositorio.Consultar();
                 return _mapper.Map<List<CategoriasDTO>>(listaCategorias.ToList());
-                //TODO: Jaider -> terminar :)
             }
             catch
             {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SistemaVentas.DTO
 {
-    public class VentaSemanaDTO
+    public class VentasSemanaDTO
     {
         public string? Fecha { get; set; }
 

@@ -12,6 +12,8 @@ namespace SistemaVentas.DTO
 
         public string? TotalIngresos { get; set; }
 
-        public List<VentaSemanaDTO>? VentasUltimaSemana { get; set; }
+        public int? TotalProductos { get; set; }
+
+        public List<VentasSemanaDTO>? VentasUltimaSemana { get; set; }
     }
 }
