@@ -17,6 +17,14 @@ namespace SistemaVentas.API
 
             builder.Services.InyectarDependencias(builder.Configuration);
 
+            builder.Services.AddCors(options => {
+                options.AddPolicy("PoliticaAcceso", app => {
+                    app.AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+                });
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -25,6 +33,8 @@ namespace SistemaVentas.API
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseCors("PoliticaAcceso");
 
             app.UseAuthorization();
 
